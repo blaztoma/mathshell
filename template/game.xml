@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="{{TASK_ID}}">
+    <title>{{TITLE}}</title>
+    <short>{{SHORT_TITLE}}</short>
+    <music>{{MUSIC}}</music>
+    <timed>{{TIMED}}</timed>
+    <duration>{{DURATION}}</duration>
+    <bonus>{{BONUS}}</bonus>
+    <fine>{{FINE}}</fine>
+    <numquestions>{{NUM_QUESTIONS}}</numquestions>
+    <operation>{{OPERATION}}</operation>
+    <from1>{{FROM_1}}</from1>
+    <to1>{{TO_1}}</to1>
+    <from2>{{FROM_2}}</from2>
+    <to2>{{TO_2}}</to2>
+    <minvalue>{{MIN_ANSWER}}</minvalue>
+    <maxvalue>{{MAX_ANSWER}}</maxvalue>
+    <author>{{AUTHOR}}</author>
+</task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="{{TASK_ID}}">
+    <title>Matematika</title>
+    <short>Matke</short>
+    <timed>1</timed>
+    <music>1</music>
+    <duration>40</duration>
+    <bonus>5</bonus>
+    <fine>0</fine>
+    <numquestions>5</numquestions>
+    <operation>+</operation>
+    <from1>1</from1>
+    <to1>5</to1>
+    <from2>1</from2>
+    <to2>5</to2>
+    <minvalue>1</minvalue>
+    <maxvalue>10</maxvalue>
+    <author>Tomas</author>
+</task>
