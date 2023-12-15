@@ -4,6 +4,15 @@
 	$_taskAuthor = "";
 	$_taskId = "";
 	$_shortTitle = "";
+	$_taskScore = 100;
+
+	$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+	$host = $_SERVER['HTTP_HOST'];
+	$script_dir = str_replace('\\', '/', dirname(__FILE__));
+	$document_root = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+
+	$relative_path = str_replace($document_root, '', $script_dir);
+	$base_url = "$protocol://$host$relative_path/";
 
 	function make_seed()
 	{
@@ -39,6 +48,7 @@
 		global $_shortTitle;
 		global $_taskAuthor;
 		global $_taskId;
+		global $_taskScore;
 		global $_shortTitle;
 		global $_numQuestions;
 		global $_taskTiming;
@@ -74,6 +84,7 @@
 				$_numQuestions = sanitizeInput($taskObject->numquestions);
 				$_taskTiming = sanitizeInput($taskObject->timed);
 				$_taskMusic = sanitizeInput($taskObject->music);
+				$_taskScore = sanitizeInput($taskObject->score);
 				$_duration = sanitizeInput($taskObject->duration);
 				$_bonus = sanitizeInput($taskObject->bonus);
 				$_fine = sanitizeInput($taskObject->fine);
@@ -109,6 +120,7 @@
 		$newcontents=str_replace("{{AUTHOR}}", $post["t_author"], $newcontents);	
 		$newcontents=str_replace("{{TIMED}}", $post["t_timing"] == "on" ? 1 : 0, $newcontents);
 		$newcontents=str_replace("{{MUSIC}}", $post["t_music"] == "on" ? 1 : 0, $newcontents);
+		$newcontents=str_replace("{{PASSING_SCORE}}", $post["p_score"], $newcontents);	
 		$newcontents=str_replace("{{DURATION}}", $post["t_duration"] ? $post["t_duration"] : 0, $newcontents);
 		$newcontents=str_replace("{{BONUS}}", $post["t_bonus"] ? $post["t_bonus"] : 0, $newcontents);
 		$newcontents=str_replace("{{FINE}}", $post["t_fine"] ? $post["t_fine"] : 0, $newcontents);
@@ -173,6 +185,7 @@
 		global $_taskTitle;
 		global $_taskLink;
 		global $_taskFrameCode;
+		global $base_url;
 
 		mt_srand(make_seed());
         $rseed=mt_rand(1,999);
@@ -198,8 +211,7 @@
 		}
 
 		$_taskFolder = "public/" . uniqid();
-		// $_taskLink = "https://arzinai.lt/scorm/" . $_taskFolder;
-		$_taskLink = "http://localhost/mathshell/" . $_taskFolder;
+		$_taskLink = $base_url . $_taskFolder;
 		$zip = new ZipArchive;
 		if ($zip->open("shells/scormpackage".$rseed.".zip") === TRUE) {
 			$zip->extractTo($_taskFolder);

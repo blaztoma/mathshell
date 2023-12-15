@@ -7,6 +7,7 @@
     <duration>{{DURATION}}</duration>
     <bonus>{{BONUS}}</bonus>
     <fine>{{FINE}}</fine>
+    <score>{{PASSING_SCORE}}</score>
     <numquestions>{{NUM_QUESTIONS}}</numquestions>
     <operation>{{OPERATION}}</operation>
     <from1>{{FROM_1}}</from1>

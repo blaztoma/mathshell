@@ -250,7 +250,7 @@
 			inputElement = parentElement.querySelector("input");
 			inputElement.value = "task_" + Math.floor(Math.random() * 100000000);
 		}
-		
+
 		function change_button(new_op, new_text) {
 			$("#t_operation").prop('value', new_op);
 			$("#b_operation").html(new_text);
@@ -267,41 +267,6 @@
 		function selectFile() {
 			$('input[type="file"]').click();
 		}
-
-		function addTest() {
-			const node = document.getElementById("test_template");
-			const clone = node.cloneNode(true);
-			document.getElementById("tests").appendChild(clone);
-  		}
-
-	    function createEditor(codeId) {
-	        var textarea = document.getElementById(codeId);
-	        editor = CodeMirror.fromTextArea(textarea, {
-	            mode: {name: "python",
-	                   version: 2,
-	                   singleLineStringErrors: false
-	               },
-	            lineNumbers: true,
-	            textWrapping: false,
-	            indentUnit: 4,
-	            indentWithTabs: true,
-	            fontSize: "10pt",
-	            autoMatchParens: true,
-	            matchBrackets: true,
-	            theme: "dracula",
-	            extraKeys:{
-	                Tab: function (cm) {
-	                    if (cm.doc.somethingSelected()) {
-	                        return CodeMirror.Pass;
-	                    }
-	                    var spacesPerTab = cm.getOption("indentUnit");
-	                    var spacesToInsert = spacesPerTab - (cm.doc.getCursor("start").ch % spacesPerTab);    
-	                    var spaces = Array(spacesToInsert + 1).join(" ");
-	                    cm.replaceSelection(spaces, "end", "+input");
-	                }
-	            }
-	        });
-	    }
 
 	</script>
 
