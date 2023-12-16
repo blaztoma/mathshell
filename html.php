@@ -44,7 +44,7 @@
 						<label>Užduoties pavadinimas</label>
 						<div class="input-group">
 							<div class="input-group-prepend">	
-								<span class="input-group-text"><i class='bx bx-phone'></i></span>
+								<span class="input-group-text"><i class='bx bx-text'></i></span>
 							</div>
 							<input type="text" name="t_title" class="form-control border-left-0" placeholder="Užduoties pavadinimas" value="<?=$_taskTitle?>" >
 						</div>
@@ -54,7 +54,7 @@
 						<label>Trumpas užduoties pavadinimas (tai bus programos pavadinimas)</label>
 						<div class="input-group">
 							<div class="input-group-prepend">	
-								<span class="input-group-text"><i class='bx bx-phone'></i></span>
+								<span class="input-group-text"><i class='bx bx-package'></i></span>
 							</div>
 							<input type="text" name="s_title" class="form-control border-left-0" placeholder="Užduoties trumpas pavadinimas" value="<?=$_shortTitle?>" >
 						</div>
@@ -64,7 +64,7 @@
 						<label>Klausimų kiekis</label>
 						<div class="input-group">
 							<div class="input-group-prepend">	
-								<span class="input-group-text"><i class='bx bx-phone'></i></span>
+								<span class="input-group-text"><i class='bx bx-list-ol'></i></span>
 							</div>
 							<input type="text" name="t_numquestions" class="form-control border-left-0" placeholder="10" value="<?=$_numQuestions?>" >
 						</div>
@@ -209,7 +209,7 @@
 						<label>Autorius</label>
 						<div class="input-group">
 							<div class="input-group-prepend">	
-								<span class="input-group-text"><i class='bx bx-phone'></i></span>
+								<span class="input-group-text"><i class='bx bx-user'></i></span>
 							</div>
 							<input type="text" name="t_author" class="form-control border-left-0" placeholder="Vardas ir pavardė" value="<?=$_taskAuthor?>" >
 						</div>
