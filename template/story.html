@@ -8,6 +8,12 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no,minimal-ui"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <style>
     html, body { height: 100%; padding: 0; margin: 0 }
     #app { height: 100%; width: 100%; }
@@ -27,7 +33,7 @@
       scale: 'noscale',
       captureRc: false,
       browserSize: 'optimal',
-      bgColor: '#FFFFFF',
+      bgColor: '#F5EBDA',
       features: 'ConnectionMessages,DropIn1,DropIn2,DropIn3,DropIn4,DropIn5,FullScreenToggle,HyperlinkHoverStateFix,LayerPresentAsDialog,MultipleQuizTracking,UpdatedThemeEditor',
       themeName: 'unified',
       preloaderColor: '#8C8C8C',
@@ -73,7 +79,7 @@
   <script>window.THREE = { };</script>
   
 </head>
-<body style="background: #FFFFFF" class="cs-HTML theme-unified">
+<body style="background: #F5EBDA" class="cs-HTML theme-unified">
   <!-- 360 -->
   <script>!function(){var e,i=/iPhone/i,o=/iPod/i,n=/iPad/i,t=/\biOS-universal(?:.+)Mac\b/i,r=/\bAndroid(?:.+)Mobile\b/i,a=/Android/i,d=/(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,p=/Silk/i,l=/Windows Phone/i,u=/\bWindows(?:.+)ARM\b/i,b=/BlackBerry/i,s=/BB10/i,c=/Opera Mini/i,f=/\b(CriOS|Chrome)(?:.+)Mobile/i,h=/Mobile(?:.+)Firefox\b/i,v=function(e){return void 0!==e&&"MacIntel"===e.platform&&"number"==typeof e.maxTouchPoints&&e.maxTouchPoints>1&&"undefined"==typeof MSStream};e=function(e){var m={userAgent:"",platform:"",maxTouchPoints:0};e||"undefined"==typeof navigator?"string"==typeof e?m.userAgent=e:e&&e.userAgent&&(m={userAgent:e.userAgent,platform:e.platform,maxTouchPoints:e.maxTouchPoints||0}):m={userAgent:navigator.userAgent,platform:navigator.platform,maxTouchPoints:navigator.maxTouchPoints||0};var g=m.userAgent,y=g.split("[FBAN");void 0!==y[1]&&(g=y[0]),void 0!==(y=g.split("Twitter"))[1]&&(g=y[0]);var A=function(e){return function(i){return i.test(e)}}(g),w={apple:{phone:A(i)&&!A(l),ipod:A(o),tablet:!A(i)&&(A(n)||v(m))&&!A(l),universal:A(t),device:(A(i)||A(o)||A(n)||A(t)||v(m))&&!A(l)},amazon:{phone:A(d),tablet:!A(d)&&A(p),device:A(d)||A(p)},android:{phone:!A(l)&&A(d)||!A(l)&&A(r),tablet:!A(l)&&!A(d)&&!A(r)&&(A(p)||A(a)),device:!A(l)&&(A(d)||A(p)||A(r)||A(a))||A(/\bokhttp\b/i)},windows:{phone:A(l),tablet:A(u),device:A(l)||A(u)},other:{blackberry:A(b),blackberry10:A(s),opera:A(c),firefox:A(h),chrome:A(f),device:A(b)||A(s)||A(c)||A(h)||A(f)},any:!1,phone:!1,tablet:!1};return w.any=w.apple.device||w.android.device||w.windows.device||w.other.device,w.phone=w.apple.phone||w.android.phone||w.windows.phone,w.tablet=w.apple.tablet||w.android.tablet||w.windows.tablet,w}(),"object"==typeof exports&&"undefined"!=typeof module?module.exports=e:"function"==typeof define&&define.amd?define((function(){return e})):this.isMobile=e}();
     window.isMobile.apple.tablet = window.isMobile.apple.tablet ||
@@ -450,7 +456,11 @@
     }
   </script>
 
-  
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>  
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
 </body>

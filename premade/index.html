@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <!-- Created using Storyline 360 - http://www.articulate.com  -->
-  <!-- version: 3.78.30680.0 -->
+  <!-- version: 3.80.30988.0 -->
   <title>{{TITLE}}</title>
   <meta http-equiv="x-ua-compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no,minimal-ui"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-    <meta name="msapplication-tap-highlight" content="no"/>
-    <meta name="theme-color" content="#D7543D"/>
-    <link rel="apple-touch-icon" href="data/apple-touch-icon.png"/>
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
-    <link rel="manifest" href="manifest.json" />
+  <meta name="msapplication-tap-highlight" content="no"/>
+  <meta name="theme-color" content="#D7543D"/>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
   <style>
     html, body { height: 100%; padding: 0; margin: 0 }
@@ -34,8 +36,8 @@
       scale: 'noscale',
       captureRc: false,
       browserSize: 'optimal',
-      bgColor: '#FFFFFF',
-      features: 'AccessibleVideo,BgAudioBlip,ConnectionMessages,DropIn1,DropIn2,DropIn3,FullScreenToggle,LayerPresentAsDialog,MultipleQuizTracking,PlayerSpeedControl,StreamingVideo,UpdatedThemeEditor,UseAudioElement,VideoSync',
+      bgColor: '#F5EBDA',
+      features: 'ConnectionMessages,DropIn1,DropIn2,DropIn3,DropIn4,DropIn5,FullScreenToggle,HyperlinkHoverStateFix,LayerPresentAsDialog,MultipleQuizTracking,UpdatedThemeEditor',
       themeName: 'unified',
       preloaderColor: '#8C8C8C',
       suppressAnalytics: false,
@@ -43,8 +45,8 @@
       publishSource: 'storyline',
       aid: 'aid|2e7f73c8-d469-43f4-8749-3ecd7e1a8d8c',
       cid: '03bb8c18-be72-40d0-a8b9-b0afe8fd23e1',
-      playerVersion: '3.78.30680.0',
-      publishTimestamp: '2023-08-11T10:33:52.2582619Z',
+      playerVersion: '3.80.30988.0',
+      publishTimestamp: '2023-09-24T18:12:42.7377905Z',
       maxIosVideoElements: 10,
       connectionSettings: { message: 'Esate%20neprisijung%C4%99s.%20M%C4%97gink%20prisijungti...', useDarkTheme: true, mode: 'disabled' },
 
@@ -80,7 +82,7 @@
   <script>window.THREE = { };</script>
   
 </head>
-<body style="background: #FFFFFF" class="cs-HTML theme-unified">
+<body style="background: #F5EBDA" class="cs-HTML theme-unified">
   <!-- 360 -->
   <script>!function(){var e,i=/iPhone/i,o=/iPod/i,n=/iPad/i,t=/\biOS-universal(?:.+)Mac\b/i,r=/\bAndroid(?:.+)Mobile\b/i,a=/Android/i,d=/(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,p=/Silk/i,l=/Windows Phone/i,u=/\bWindows(?:.+)ARM\b/i,b=/BlackBerry/i,s=/BB10/i,c=/Opera Mini/i,f=/\b(CriOS|Chrome)(?:.+)Mobile/i,h=/Mobile(?:.+)Firefox\b/i,v=function(e){return void 0!==e&&"MacIntel"===e.platform&&"number"==typeof e.maxTouchPoints&&e.maxTouchPoints>1&&"undefined"==typeof MSStream};e=function(e){var m={userAgent:"",platform:"",maxTouchPoints:0};e||"undefined"==typeof navigator?"string"==typeof e?m.userAgent=e:e&&e.userAgent&&(m={userAgent:e.userAgent,platform:e.platform,maxTouchPoints:e.maxTouchPoints||0}):m={userAgent:navigator.userAgent,platform:navigator.platform,maxTouchPoints:navigator.maxTouchPoints||0};var g=m.userAgent,y=g.split("[FBAN");void 0!==y[1]&&(g=y[0]),void 0!==(y=g.split("Twitter"))[1]&&(g=y[0]);var A=function(e){return function(i){return i.test(e)}}(g),w={apple:{phone:A(i)&&!A(l),ipod:A(o),tablet:!A(i)&&(A(n)||v(m))&&!A(l),universal:A(t),device:(A(i)||A(o)||A(n)||A(t)||v(m))&&!A(l)},amazon:{phone:A(d),tablet:!A(d)&&A(p),device:A(d)||A(p)},android:{phone:!A(l)&&A(d)||!A(l)&&A(r),tablet:!A(l)&&!A(d)&&!A(r)&&(A(p)||A(a)),device:!A(l)&&(A(d)||A(p)||A(r)||A(a))||A(/\bokhttp\b/i)},windows:{phone:A(l),tablet:A(u),device:A(l)||A(u)},other:{blackberry:A(b),blackberry10:A(s),opera:A(c),firefox:A(h),chrome:A(f),device:A(b)||A(s)||A(c)||A(h)||A(f)},any:!1,phone:!1,tablet:!1};return w.any=w.apple.device||w.android.device||w.windows.device||w.other.device,w.phone=w.apple.phone||w.android.phone||w.windows.phone,w.tablet=w.apple.tablet||w.android.tablet||w.windows.tablet,w}(),"object"==typeof exports&&"undefined"!=typeof module?module.exports=e:"function"==typeof define&&define.amd?define((function(){return e})):this.isMobile=e}();
     window.isMobile.apple.tablet = window.isMobile.apple.tablet ||
@@ -138,7 +140,7 @@
   </script>
 
   <div class="mobile-load-title-overlay" style="display: none">
-    <div class="mobile-load-title">MonsterMath</div>
+    <div class="mobile-load-title">{{TITLE}}</div>
   </div>
 
   <div class="mobile-chrome-warning"></div>
@@ -148,7 +150,7 @@
   .warn-connection-dialog {
     display: none;
     background: transparent;
-    pointer-events: none;
+    pointer-events: all;
     position: fixed;
     left: 0;
     top: 0;
@@ -158,6 +160,7 @@
   }
 
   .warn-connection-content {
+    pointer-events: all;
     border-radius: 4px;
     background: white;
     border: 1px solid #E7E7E7;
@@ -226,14 +229,14 @@
   }
 </style>
 
-<div class="warn-connection-dialog">
+<div class="warn-connection-dialog" role="alertdialog" aria-modal="true" tabindex="0" aria-labelledby="warn-connection-message">
   <div class="warn-connection-content">
     <svg width="17" height="15" viewBox="0 0 17 15" xmlns="http://www.w3.org/2000/svg">
       <path fill="#8F0000" stroke="white" d="M16.07,12.98 L15.88,12.23 L9.51,1.21 C8.97,0.26,7.6,0.26,7.06,1.21 L0.69,12.23 C0.15,13.16,0.81,14.36,1.91,14.36 H14.65 C15.47,14.36,16.05,13.7,16.07,12.98 Z"/>
       <path fill="white" stroke="white" d="M8.58,5.5 C8.35,5.28,8.5,5.35,8.21,5.32 C8.09,5.35,7.97,5.49,7.96,5.67 C7.97,5.79,7.98,5.92,7.98,6.04 L7.98,6.04 C7.99,6.17,8,6.31,8.01,6.43 L8.01,6.44 C8.03,6.92,8.06,7.41,8.09,7.9 L8.09,7.9 C8.12,8.39,8.14,8.88,8.17,9.37 C8.17,9.39,8.18,9.42,8.2,9.44 C8.23,9.46,8.25,9.47,8.28,9.47 C8.31,9.47,8.34,9.46,8.35,9.44 C8.37,9.43,8.38,9.4,8.39,9.35 L8.39,9.34 C8.39,9.24,8.4,9.15,8.4,9.05 L8.4,9.05 C8.41,8.96,8.41,8.86,8.42,8.75 C8.43,8.44,8.45,8.12,8.47,7.81 L8.47,7.81 C8.49,7.49,8.51,7.18,8.53,6.87 C8.55,6.46,8.56,6.05,8.59,5.64 L8.6,5.62 C8.6,5.57,8.59,5.53,8.58,5.5 L8.21,5.32 Z"/>
       <circle fill="white" stroke="white" cx="8.3" cy="11.35" r="0.3"/>
     </svg>
-    <p>You are offline. Trying to reconnect...</p>
+    <p id="warn-connection-message">You are offline. Trying to reconnect...</p>
   </div>
 </div>
 
@@ -255,7 +258,7 @@
       window.globals.features.indexOf('ConnectionMessages') != -1 &&
       connectionSettings.mode === 'normal';
 
-    window.DS.connection.useConnectionMessages = useConnectionMessages
+    window.DS.connection.useConnectionMessages = useConnectionMessages;
 
     var assetCount = 0;
     var checkLoadedId;
@@ -263,7 +266,7 @@
 
     if (useConnectionMessages && connectionSettings != null) {
       var contentEl = document.querySelector('.warn-connection-content');
-      var messageEl = contentEl.querySelector('p')
+      var messageEl = contentEl.querySelector('p');
 
       if (connectionSettings.useDarkTheme) {
         contentEl.style.borderColor = '#BABBBA';
@@ -371,6 +374,7 @@
     function hideWarning() {
       document.body.classList.remove('is-offline');
       DS.connection.warningShown = false;
+      enableKeys();
     }
     DS.connection.hideWarning = hideWarning
 
@@ -378,6 +382,7 @@
       document.body.classList.add('is-offline')
       DS.connection.warningShown = true;
       updateWarningPosition();
+      disableKeys();
     }
 
     function updateWarningPosition() {
@@ -402,6 +407,40 @@
       window.requestAnimationFrame(updateWarningPosition);
     }
 
+    function onDisableKeyDown(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+
+    function onDisableKeyUp(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+
+    var accStyle = document.createElement('style');
+    var warnDialogEl = document.querySelector('.warn-connection-dialog');
+
+    function disableKeys() {
+      if (DS.views.nsStack.length === 1) {
+        DS.views.nsStack[0].tabReachable = false
+        DS.views.nsStack[0].updateTabIndex(true, true);
+      }
+
+      accStyle.innerHTML = '.acc-shadow-dom { display: none; }';
+      document.body.appendChild(accStyle);
+
+      warnDialogEl.parentNode.append(warnDialogEl);
+      warnDialogEl.focus();
+    }
+
+    function enableKeys() {
+      document.body.removeChild(accStyle);
+      if (DS.views.nsStack.length === 1 && DS.views.nsStack[0].name === '_frame') {
+        DS.views.nsStack[0].tabReachable = true;
+        DS.views.nsStack[0].updateTabIndex();
+      }
+    }
+
     // these will all be noops if the feature flag isn't set in
     // the data and `window.globals.features`
     DS.connection.requiredAsset = requiredAsset;
@@ -414,16 +453,18 @@
 
 
   <script>
-    
     if (window.autoSpider && window.vInterfaceObject) {
       document.querySelector('.mobile-load-title-overlay').style.display = 'none';
     }
   </script>
 
-  
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>    
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
-  <script src="myscripts.js"></script>
 </body>
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>

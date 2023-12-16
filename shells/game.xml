@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<task id="unikalus1">
-    <title>Užduoties pavadinimas</title>
-    <short>Pavadinimas trumpas</short>
+<task id="task_24441851">
+    <title>Iki 10</title>
+    <short>Iki 10</short>
     <music>1</music>
     <timed>0</timed>
     <duration>0</duration>
     <bonus>0</bonus>
     <fine>0</fine>
+    <score>50</score>
     <numquestions>5</numquestions>
     <operation>+</operation>
     <from1>1</from1>
-    <to1>10</to1>
-    <from2>10</from2>
-    <to2>20</to2>
-    <minvalue>10</minvalue>
-    <maxvalue>30</maxvalue>
+    <to1>5</to1>
+    <from2>1</from2>
+    <to2>5</to2>
+    <minvalue>2</minvalue>
+    <maxvalue>10</maxvalue>
     <author>Tomas Blažauskas</author>
 </task>

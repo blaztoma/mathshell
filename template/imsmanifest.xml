@@ -129,6 +129,10 @@
       <file href="index.html" />
       <file href="story.html" />
       <file href="index_lms.html" />
+      <file href="apple-touch-icon.png" />
+      <file href="favicon.ico" />
+      <file href="favicon-16x16.png" />
+      <file href="favicon-32x32.png" />
       <file href="lms/AICCComm.html" />
       <file href="lms/blank.html" />
       <file href="lms/browsersniff.js" />

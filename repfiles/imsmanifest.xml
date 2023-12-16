@@ -52,7 +52,7 @@
   </metadata>
   <organizations default="MonsterMath_ORG">
     <organization identifier="MonsterMath_ORG">
-      <title>MonsterMath</title>
+      <title>{{TITLE}}</title>
       <item identifier="monster_math_SCO" isvisible="true" identifierref="_{{TASK_ID}}_RES">
         <title>{{TITLE}}</title>
       </item>
@@ -83,7 +83,7 @@
       <file href="mobile/5zHaozqvXz6.png" />
       <file href="mobile/6Dy6HIRrtH7.png" />
       <file href="mobile/6Uk9Fm9Hiok.png" />
-      <file href="story_content/66WwxeYml0a_44100_56_0.mp3" />
+      <file href="story_content/67hnSIIs41X_44100_56_0.mp3" />
       <file href="story_content/6mbG0EwSzXG_44100_56_0.mp3" />
       <file href="story_content/6Wgv1REY32l_44100_56_0.mp3" />
       <file href="mobile/6Z7ztrqu1B8.png" />
@@ -129,6 +129,10 @@
       <file href="index.html" />
       <file href="story.html" />
       <file href="index_lms.html" />
+      <file href="apple-touch-icon.png" />
+      <file href="favicon.ico" />
+      <file href="favicon-16x16.png" />
+      <file href="favicon-32x32.png" />
       <file href="lms/AICCComm.html" />
       <file href="lms/blank.html" />
       <file href="lms/browsersniff.js" />

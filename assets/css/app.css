@@ -5378,3 +5378,9 @@ body.bg-theme12 {
 	}
 
 }
+
+#p_score_box {
+    width: 60px;
+    margin-right: 15px;
+    flex: 0 1 auto;
+}

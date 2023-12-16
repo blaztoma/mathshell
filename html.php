@@ -39,7 +39,7 @@
 				</div>
 				<hr style="margin-top: 4rem;clear: both;" />
 
-				<form action="index.php" method="post">
+				<form id="mainform" action="index.php" method="post">
 					<div class="form-group">
 						<label>Užduoties pavadinimas</label>
 						<div class="input-group">
@@ -127,7 +127,7 @@
 							<div class="input-group-prepend">	
 								<span class="input-group-text">Bauda</span>
 							</div>
-							<input type="text" name="t_fine" class="form-control border-left-0 timing_input" placeholder="-5" value="<?=$_fine?>" <?=$_disabled?> >
+							<input type="text" name="t_fine" class="form-control border-left-0 timing_input" placeholder="5" value="<?=$_fine?>" <?=$_disabled?> >
 						</div>
 					</div>
 
@@ -231,8 +231,8 @@
 					<br />
 
 					<div class="form-group">
-						<button type="submit" value="Daryti" class="btn btn-light px-5" style="margin-right: 20px; min-width: 350px;" onclick="$('#mod').val('makescorm');">Sukonstruoti ir atsisiųsti paketą</button>
-						<button type="submit" value="Daryti2" class="btn btn-light px-5" style="min-width: 350px;" onclick="$('#mod').val('makeweb');">Sukonstruoti ir paskelbti serveryje</button>
+						<button type="submit" value="Daryti" class="btn btn-light px-5" style="margin-right: 20px; min-width: 350px;" onclick="document.getElementById('mainform').target = '_self'; $('#mod').val('makescorm');">Sukonstruoti ir atsisiųsti paketą</button>
+						<button type="submit" value="Daryti2" class="btn btn-light px-5" style="min-width: 350px;" onclick="document.getElementById('mainform').target = '_blank'; $('#mod').val('makeweb');">Sukonstruoti ir paskelbti serveryje</button>
 					</div>
 
 					<input type="hidden" name="mod" id="mod" value="makescorm">
