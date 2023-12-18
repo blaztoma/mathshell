@@ -232,7 +232,8 @@
 
 					<div class="form-group">
 						<button type="submit" value="Daryti" class="btn btn-light px-5" style="margin-right: 20px; min-width: 350px;" onclick="document.getElementById('mainform').target = '_self'; $('#mod').val('makescorm');">Sukonstruoti ir atsisiųsti paketą</button>
-						<button type="submit" value="Daryti2" class="btn btn-light px-5" style="min-width: 350px;" onclick="document.getElementById('mainform').target = '_blank'; $('#mod').val('makeweb');">Sukonstruoti ir paskelbti serveryje</button>
+						<button type="submit" value="Daryti2" class="btn btn-light px-5" style="margin-right: 20px; min-width: 350px;" onclick="document.getElementById('mainform').target = '_blank'; $('#mod').val('makeweb');">Sukonstruoti ir paskelbti serveryje</button>
+						<button type="submit" value="Daryti3" class="btn btn-light px-5" style="min-width: 350px;" onclick="document.getElementById('mainform').target = '_blank'; $('#mod').val('maketest');">Testuoti paketą</button>
 					</div>
 
 					<input type="hidden" name="mod" id="mod" value="makescorm">

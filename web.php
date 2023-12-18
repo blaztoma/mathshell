@@ -84,12 +84,6 @@
 					</div>
 				</div>
 
-				<br />
-
-				<div class="form-group">
-					<button type="submit" value="Daryti" class="btn btn-light px-5" style="margin-right: 20px; min-width: 350px;">Grįžti į užduočių kūrimą</button>
-				</div>
-
 			</div>
 		</div>
 

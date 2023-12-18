@@ -217,12 +217,57 @@
 			$zip->extractTo($_taskFolder);
 		}
 
-		$phptempl = "<iframe src=\"" . $_taskLink . "\" width=\"100%\" height=\"1000\" frameborder=\"0\" allow=\"fullscreen\" title=\"" . $post["t_title"] . "\"></iframe>";
+		$random_id=mt_rand(1,9999);
+		$phptempl = "<iframe id=\"ifr_".$random_id."\" class=\"pyframe\" src=\"" . $_taskLink . "\" width=\"100%\" height=\"1000\" frameborder=\"0\" allow=\"fullscreen\" title=\"" . $post["t_title"] . "\"></iframe>";
 
 		$_taskTitle = $post["t_title"];
 		$_taskFrameCode = $phptempl;
 	}
-     
+
+	function makeTest( $post )
+	{
+		global $_taskTitle;
+		global $_taskLink;
+		global $_taskFrameCode;
+		global $base_url;
+
+		mt_srand(make_seed());
+        $rseed=mt_rand(1,999);
+		copy("template.zip","shells/scormpackage".$rseed.".zip");
+
+		writeImsManifest( $post );
+		writeTask( $post );
+		writeIndex( $post );
+		writeIndexLMS( $post );
+		writeStory( $post );
+		writeManifest( $post );
+
+		$zip = new ZipArchive;
+		if ($zip->open("shells/scormpackage".$rseed.".zip") === TRUE) {
+		    $zip->addFile('shells/imsmanifest.xml', 'imsmanifest.xml');
+		    $zip->addFile('shells/game.xml', 'game.xml');
+		    $zip->addFile('shells/inhtml.html', 'index.html');
+		    $zip->addFile('shells/index_lms.html', 'index_lms.html');
+		    $zip->addFile('shells/story.html', 'story.html');
+		    $zip->addFile('shells/manifest.json', 'manifest.json');
+		    $zip->close();
+		} else {
+		}
+
+		$_taskFolder = "testing/" . $rseed;
+		$_taskLink = $base_url . $_taskFolder;
+		$zip = new ZipArchive;
+		if ($zip->open("shells/scormpackage".$rseed.".zip") === TRUE) {
+			$zip->extractTo($_taskFolder);
+		}
+
+		$random_id=mt_rand(1,9999);
+		$phptempl = "<iframe id=\"ifr_".$random_id."\" class=\"pyframe\" src=\"" . $_taskLink . "\" width=\"100%\" height=\"1000\" frameborder=\"0\" allow=\"fullscreen\" title=\"" . $post["t_title"] . "\"></iframe>";
+
+		$_taskTitle = $post["t_title"];
+		$_taskFrameCode = $phptempl;
+	}
+	     
 	function sendArchive( $post )
 	{
 		mt_srand(make_seed());
@@ -262,7 +307,10 @@
 		sendArchive($_POST);
 	} else if (isset( $vars['mod'] ) && $vars['mod'] == 'makeweb') {
 		makeWeb($_POST);
-		include_once("web.php");		
+		include_once("web.php");
+	} else if (isset( $vars['mod'] ) && $vars['mod'] == 'maketest') {
+		makeTest($_POST);
+		include_once("test.php");		
 	} else if (isset( $vars['mod'] ) && $vars['mod'] == 'uploadscorm') {
 		uploadArchive($_POST);
 		include_once("html.php");

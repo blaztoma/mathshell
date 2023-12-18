@@ -7,7 +7,7 @@
     <score>50</score>
     <duration>40</duration>
     <bonus>5</bonus>
-    <fine>0</fine>
+    <fine>5</fine>
     <numquestions>5</numquestions>
     <operation>+</operation>
     <from1>1</from1>

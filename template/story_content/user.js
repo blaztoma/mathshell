@@ -2,68 +2,65 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6LtiHMw3kAa":
+      case "6Yo6IyKt6dQ":
         Script1();
         break;
-      case "6UIFSHcBQQC":
+      case "5pKA5fQ8Jox":
         Script2();
         break;
-      case "6Fi1182e1ko":
+      case "5aZlmmGyfHB":
         Script3();
         break;
-      case "6VeDoLFpeUW":
+      case "5sDiIIByOy2":
         Script4();
         break;
-      case "6qHd1m6z5yJ":
+      case "6ZM4rMbhCRm":
         Script5();
         break;
-      case "6CQZSCTmn0O":
+      case "5V1tZyRNEud":
         Script6();
         break;
-      case "5i7x0vEw22C":
+      case "5rra9X875pa":
         Script7();
         break;
-      case "6qTkDX891xU":
+      case "608FjINe9zm":
         Script8();
         break;
-      case "6kLHL2jQqp6":
+      case "6OwwxOAgQxh":
         Script9();
         break;
-      case "5v1uODDJFZS":
+      case "6SmWwsvFr8d":
         Script10();
         break;
-      case "6g1EQ4cBjnP":
+      case "63DmFSpmFFY":
         Script11();
         break;
-      case "5l8mRszxf5W":
+      case "6oaNgLcynL3":
         Script12();
         break;
-      case "6NZH0DBcEoH":
+      case "6kvM9r6zP98":
         Script13();
         break;
-      case "6GHmtWJACbU":
+      case "6mtDU2y4CEF":
         Script14();
         break;
-      case "6nK5qXFMr7t":
+      case "6FU2JelKZIv":
         Script15();
         break;
-      case "6bDBbPMWvRS":
+      case "670VtTmGYvO":
         Script16();
         break;
-      case "6qUdevYIw6x":
+      case "6pTXM26xxMV":
         Script17();
         break;
-      case "6WkssKpedC1":
+      case "6lXYSBALHBg":
         Script18();
         break;
-      case "5pTd6ctgDu3":
+      case "5iUBwIepjro":
         Script19();
         break;
-      case "6bewmJd0tKQ":
+      case "5orjjAUjw42":
         Script20();
-        break;
-      case "6Vs5bnkW2RU":
-        Script21();
         break;
   }
 }
@@ -255,13 +252,24 @@ window.toggle_pause = function() {
 	paused = !paused;
 }
 
+window.isNumber = function(value) {
+  return value !== '' && !isNaN(Number(value));
+}
+
 inputas = document.getElementsByTagName('textarea')[0];
 inputas.onkeydown = function(o) {
   o = o || event;
   if (o.keyCode == 13) {
-    console.log("Nuo inputo");
-  	player.SetVar("TextEntry", inputas.value);
-	player.SetVar("AnswerEntered", true);
+    clayer = player.GetVar("OnCorrectLayer");
+    ilayer = player.GetVar("OnIncorrectLayer");
+    if(clayer) {
+    	player.SetVar("onCorrectClose", true);
+	} else if(ilayer) {
+    	player.SetVar("onIncorrectClose", true);	
+	} else {
+  		player.SetVar("TextEntry", inputas.value);
+		player.SetVar("AnswerEntered", true);
+	}
 	return false;
   }
   return true;
@@ -271,40 +279,30 @@ inputas.onkeydown = function(o) {
 
 function Script5()
 {
-  canCalculate = player.GetVar("OnCorrectLayer");
-if(canCalculate) {
-	toggle_pause();
-	player = GetPlayer();
-	answer = 0;
-	num1 = player.GetVar("a");
-	num2 = player.GetVar("b");
-	op_code = player.GetVar("operation");
-	if (op_code == "+") answer = num1 + num2;
-	if (op_code == "*") answer = num1 * num2;
-	if (op_code == "-") answer = num1 - num2;
-	if (op_code == "/") answer = num1 / num2;
-	player.SetVar("answer", answer);
-	player.SetVar("NumEntry", answer.toString());
-}
+  // canCalculate = player.GetVar("OnCorrectLayer");
+// if(canCalculate) {
+	enteredNr = player.GetVar("TextEntry");
+	if(isNumber(enteredNr)) {
+		toggle_pause();
+		player = GetPlayer();
+		answer = 0;
+		num1 = player.GetVar("a");
+		num2 = player.GetVar("b");
+		op_code = player.GetVar("operation");
+		if (op_code == "+") answer = num1 + num2;
+		if (op_code == "*") answer = num1 * num2;
+		if (op_code == "-") answer = num1 - num2;
+		if (op_code == "/") answer = num1 / num2;
+		player.SetVar("answer", answer);
+		player.SetVar("NumEntry", answer.toString());
+	} else {
+		player.SetVar("AnswerEntered", false);
+		player.SetVar("OnWrongNumber", true);
+	}
+// }
 }
 
 function Script6()
-{
-  toggle_pause();
-player = GetPlayer();
-answer = 0;
-num1 = player.GetVar("a");
-num2 = player.GetVar("b");
-op_code = player.GetVar("operation");
-if (op_code == "+") answer = num1 + num2;
-if (op_code == "*") answer = num1 * num2;
-if (op_code == "-") answer = num1 - num2;
-if (op_code == "/") answer = num1 / num2;
-player.SetVar("answer", answer);
-player.SetVar("NumEntry", answer.toString());
-}
-
-function Script7()
 {
   setTimeout(function(){
 var inputs = document.getElementsByTagName('textarea');
@@ -312,7 +310,7 @@ if(inputs.length) inputs[inputs.length-1].focus();
 }, 90);
 }
 
-function Script8()
+function Script7()
 {
   player = GetPlayer();
 answer = 0;
@@ -326,7 +324,7 @@ if (op_code == "/") answer = num1 / num2;
 player.SetVar("answer", answer);
 }
 
-function Script9()
+function Script8()
 {
   timer = player.GetVar("timer");
 if (timer) {
@@ -334,7 +332,7 @@ if (timer) {
 }
 }
 
-function Script10()
+function Script9()
 {
   numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");
@@ -347,7 +345,7 @@ if(score_norm>=passing_score) {
 }
 }
 
-function Script11()
+function Script10()
 {
   player = GetPlayer();
 
@@ -385,7 +383,7 @@ player.SetVar("b", num2);
 toggle_pause();
 }
 
-function Script12()
+function Script11()
 {
   player = GetPlayer();
 player.SetVar("TextEntry", "");
@@ -396,7 +394,7 @@ if(inputs.length) inputs[inputs.length-1].focus();
 }, 90);
 }
 
-function Script13()
+function Script12()
 {
   timer = player.GetVar("timer");
 if (timer) {
@@ -404,7 +402,7 @@ if (timer) {
 }
 }
 
-function Script14()
+function Script13()
 {
   numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");
@@ -418,7 +416,7 @@ if(score_norm>=passing_score) {
 
 }
 
-function Script15()
+function Script14()
 {
   player = GetPlayer();
 
@@ -456,7 +454,7 @@ player.SetVar("b", num2);
 toggle_pause();
 }
 
-function Script16()
+function Script15()
 {
   player = GetPlayer();
 player.SetVar("TextEntry", "");
@@ -465,6 +463,14 @@ setTimeout(function(){
 var inputs = document.getElementsByTagName('textarea');
 if(inputs.length) inputs[inputs.length-1].focus();
 }, 90);
+}
+
+function Script16()
+{
+  var els = document.getElementsByTagName('input');
+for (var i=0; i < els.length; i++) {
+ els[i].setAttribute("autocomplete", "off");
+}
 }
 
 function Script17()
@@ -477,21 +483,13 @@ for (var i=0; i < els.length; i++) {
 
 function Script18()
 {
-  var els = document.getElementsByTagName('input');
-for (var i=0; i < els.length; i++) {
- els[i].setAttribute("autocomplete", "off");
-}
-}
-
-function Script19()
-{
   numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");
 score_norm = Math.round((score/numqst) * 100);
 SCORM_SetScore(score_norm, max_score, 0);
 }
 
-function Script20()
+function Script19()
 {
   var els = document.getElementsByTagName('input');
 for (var i=0; i < els.length; i++) {
@@ -499,7 +497,7 @@ for (var i=0; i < els.length; i++) {
 }
 }
 
-function Script21()
+function Script20()
 {
   numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");

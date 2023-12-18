@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest identifier="task_24441851" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest identifier="task_71394914" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
   <metadata>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
     <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
       <general>
         <title>
-          <langstring xml:lang="x-none">Iki 10</langstring>
+          <langstring xml:lang="x-none">Sudėtis iki 20</langstring>
         </title>
       </general>
       <lifecycle>
@@ -52,14 +52,14 @@
   </metadata>
   <organizations default="MonsterMath_ORG">
     <organization identifier="MonsterMath_ORG">
-      <title>Iki 10</title>
-      <item identifier="monster_math_SCO" isvisible="true" identifierref="_task_24441851_RES">
-        <title>Iki 10</title>
+      <title>Sudėtis iki 20</title>
+      <item identifier="monster_math_SCO" isvisible="true" identifierref="_task_71394914_RES">
+        <title>Sudėtis iki 20</title>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="_task_24441851_RES" type="webcontent" href="index_lms.html" adlcp:scormtype="sco">
+    <resource identifier="_task_71394914_RES" type="webcontent" href="index_lms.html" adlcp:scormtype="sco">
       <file href="story_content/thumbnail.jpg" />
       <file href="mobile/60PSoWSZ84g.png" />
       <file href="mobile/6aYJYRL4iSa.png" />
