@@ -2,64 +2,64 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6Yo6IyKt6dQ":
+      case "66nXZafO22j":
         Script1();
         break;
-      case "5pKA5fQ8Jox":
+      case "6mt4e1c1hfo":
         Script2();
         break;
-      case "5aZlmmGyfHB":
+      case "5aeX1ROztPq":
         Script3();
         break;
-      case "5sDiIIByOy2":
+      case "5l8HFkdpnoU":
         Script4();
         break;
-      case "6ZM4rMbhCRm":
+      case "6dY01UBaSaC":
         Script5();
         break;
-      case "5V1tZyRNEud":
+      case "5j4OFnRmgs1":
         Script6();
         break;
-      case "5rra9X875pa":
+      case "5pqFQ0PKYLh":
         Script7();
         break;
-      case "608FjINe9zm":
+      case "6BFX9x0vW7D":
         Script8();
         break;
-      case "6OwwxOAgQxh":
+      case "65QROOoiyJm":
         Script9();
         break;
-      case "6SmWwsvFr8d":
+      case "5hmuOK79vWG":
         Script10();
         break;
-      case "63DmFSpmFFY":
+      case "6DWs4kzTBVA":
         Script11();
         break;
-      case "6oaNgLcynL3":
+      case "6RZtdsdwTQh":
         Script12();
         break;
-      case "6kvM9r6zP98":
+      case "5Z9UK2D7IeW":
         Script13();
         break;
-      case "6mtDU2y4CEF":
+      case "6pEu2NQK8ZU":
         Script14();
         break;
-      case "6FU2JelKZIv":
+      case "6D4OIqzGhjD":
         Script15();
         break;
-      case "670VtTmGYvO":
+      case "6C60ee2zegJ":
         Script16();
         break;
-      case "6pTXM26xxMV":
+      case "6BnChw60Ubh":
         Script17();
         break;
-      case "6lXYSBALHBg":
+      case "6rNtjeGWiAC":
         Script18();
         break;
-      case "5iUBwIepjro":
+      case "6My0tiSkRER":
         Script19();
         break;
-      case "5orjjAUjw42":
+      case "6YFfhghFNGB":
         Script20();
         break;
   }
@@ -483,10 +483,11 @@ for (var i=0; i < els.length; i++) {
 
 function Script18()
 {
-  numqst = player.GetVar("NumQuestions");
+  player = GetPlayer();
+numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");
 score_norm = Math.round((score/numqst) * 100);
-SCORM_SetScore(score_norm, max_score, 0);
+SCORM_SetScore(score_norm, 100, 0);
 }
 
 function Script19()
@@ -499,7 +500,8 @@ for (var i=0; i < els.length; i++) {
 
 function Script20()
 {
-  numqst = player.GetVar("NumQuestions");
+  player = GetPlayer();
+numqst = player.GetVar("NumQuestions");
 score = player.GetVar("score");
 score_norm = Math.round((score/numqst) * 100);
 SCORM_SetScore(score_norm, 100, 0);
